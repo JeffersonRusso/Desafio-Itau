@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.desafio.itau.model.Estatistica;
 import com.desafio.itau.model.Transacao;
 import com.desafio.itau.repository.TransacaoRepository;
+import com.desafio.itau.service.CalEstatisticaService;
 
 @RestController
 @RequestMapping("/estatistica")
@@ -16,11 +17,15 @@ import com.desafio.itau.repository.TransacaoRepository;
 public class EstatisticaController {
 	
 	//Repositorio com as transacoes realizadas
-	private TransacaoRepository banco = new TransacaoRepository();
+	private TransacaoRepository transacaoRepository = new TransacaoRepository();
+	
+	private CalEstatisticaService calEst = new CalEstatisticaService();
 	
 	
 	@GetMapping
 	public ResponseEntity<Estatistica> getEstatistica(){	
-		return null;
+		calEst.calcular(transacaoRepository.getTransacoes());
+		
+		return ResponseEntity.ok(calEst.getEstatistica());
 	}
 }
