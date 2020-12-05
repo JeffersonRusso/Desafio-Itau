@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.desafio.itau.model.Estatistica;
-import com.desafio.itau.model.Transacao;
 import com.desafio.itau.repository.TransacaoRepository;
 import com.desafio.itau.service.CalEstatisticaService;
 
@@ -19,6 +18,7 @@ public class EstatisticaController {
 	//Repositorio com as transacoes realizadas
 	private TransacaoRepository transacaoRepository = new TransacaoRepository();
 	
+	//Service para calcular as estatisticas
 	private CalEstatisticaService calEst = new CalEstatisticaService();
 	
 	
