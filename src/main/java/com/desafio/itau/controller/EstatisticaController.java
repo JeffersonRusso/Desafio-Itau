@@ -31,7 +31,7 @@ public class EstatisticaController {
 		return ResponseEntity.ok(calEst.getEstatistica());
 	}
 	
-	@PostMapping ("/intervalo/{milisegundos}")
+	@PostMapping
 	public void post(@PathVariable long milisegundos) {
 		calEst.setIntervaloEmMilesegundos(milisegundos);
 	}
