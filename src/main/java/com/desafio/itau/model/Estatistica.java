@@ -1,5 +1,15 @@
 package com.desafio.itau.model;
 
+//Bean de Estatistica apenas com Gets e Sets
+//Bean responsavel por receber as estatisticas calculadas
+///////////////////////////////////////////////////////////////
+// count -> soma +1 quando entra uma transacao
+// sum   -> 
+// avg   ->
+// min   ->
+// max   ->
+//////////////////////////////////////////////////////////////
+
 public class Estatistica {
 	
 	private int count;
