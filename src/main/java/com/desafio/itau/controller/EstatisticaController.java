@@ -16,7 +16,7 @@ import com.desafio.itau.repository.TransacaoRepository;
 public class EstatisticaController {
 	
 	//Repositorio com as transacoes realizadas
-	private TransacaoRepository banco = new TransacaoRepository();
+	private TransacaoRepository transacaoRepository = new TransacaoRepository();
 	
 	
 	@GetMapping
