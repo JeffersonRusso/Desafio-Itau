@@ -9,7 +9,7 @@ public class TransacaoRepository implements CRUD<Transacao>  {
 	
 	public static List<Transacao> transacoes = new ArrayList<>();
 	
-	public List<Transacao> get() {
+	public List<Transacao> getTransacoes() {
 		return transacoes;
 	}
 	
