@@ -12,15 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.desafio.itau.model.Transacao;
-import com.desafio.itau.repository.Banco;
 import com.desafio.itau.repository.CRUD;
+import com.desafio.itau.repository.TransacaoRepository;
 
 @RestController
 @RequestMapping("/transacao")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TransacaoController {
 	
-	public CRUD<Transacao> banco = new Banco();
+	//Repositorio para salvar as transacoes
+	public CRUD<Transacao> banco = new TransacaoRepository();
 	
 	@PostMapping
 	public ResponseEntity<Transacao> post (@RequestBody Transacao tsc){	
