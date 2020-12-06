@@ -1,5 +1,6 @@
 package com.desafio.itau.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,21 +18,22 @@ import com.desafio.itau.service.CalEstatisticaService;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class EstatisticaController {
 	
-	//Repositorio com as transacoes realizadas
-	private TransacaoRepository transacaoRepository = new TransacaoRepository();
+	//repositorio de transacoes
+	@Autowired
+	private TransacaoRepository repository;
 	
-	//Service para calcular as estatisticas
+	//Calcular estatisticas
 	private CalEstatisticaService calEst = new CalEstatisticaService();
 	
-	
+	//pega estatistica de todas as transacoes validas ( dos ultimos x segundos )
 	@GetMapping
-	public ResponseEntity<Estatistica> getEstatistica(){	
-		calEst.calcular(transacaoRepository.getTransacoes());
+	public ResponseEntity<Estatistica> get(){	
 		
-		return ResponseEntity.ok(calEst.getEstatistica());
+		return ResponseEntity.ok(calEst.calcular(repository.getTransacoes()));
 	}
 	
-	@PostMapping
+	// modificador das transacoes nos ultimos X segundos
+	@PostMapping("/{milisegundos}")
 	public void post(@PathVariable long milisegundos) {
 		calEst.setIntervaloEmMilesegundos(milisegundos);
 	}

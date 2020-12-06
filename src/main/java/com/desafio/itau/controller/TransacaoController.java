@@ -2,6 +2,7 @@ package com.desafio.itau.controller;
 
 import java.time.OffsetDateTime;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,15 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.desafio.itau.model.Transacao;
-import com.desafio.itau.repository.CRUD;
 import com.desafio.itau.repository.TransacaoRepository;
 
 /*
- * O objeto Json quando eviado, retornava uma hora com o UTF-0, eu não sei exatamente se esta errado o resultado ou esse é o resultado esperado.
- * EX, se for enviado o OFFSETDATATIME com o valor "2020-12-05T17:47:24.4492173-03:00 o retorno é 2020-12-05T20:47:24.4492173Z
- * Ele cancela o UTF-3 e soma a diferença no corpo, fazendo com que a hora apareça sem o UTF
+ * O objeto Json quando eviado, retornava a hora com UTF-0, eu nao sei exatamente se estava errado ou o resultado esperado e esse.
+ * EX: se for enviado o OFFSETDATATIME com o valor "2020-12-05T17:47:24.4492173-03:00 o retorno é 2020-12-05T20:47:24.4492173Z
+ * Ele cancela o UTF-3 e soma a diferença no Json
  * 
- *  UPDATE >> Deixei o atributo datHora com .now, o bug foi corrigido
+ *  UPDATE >> Deixei o atributo dataHora como offSetDataTime.now(), o bug foi corrigido, porém o campo é preenchido automaticamente
  */
 
 @RestController
@@ -28,27 +28,28 @@ import com.desafio.itau.repository.TransacaoRepository;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TransacaoController {
 	
-	//Repositorio para salvar as transacoes
-	public CRUD<Transacao> banco = new TransacaoRepository();
+	//repositorio de transacoes
+	@Autowired
+	public TransacaoRepository repository;
 	
+	
+	//Cria uma transacao
 	@PostMapping
 	public ResponseEntity<Transacao> post (@RequestBody Transacao tsc){	
-			
-		OffsetDateTime dataHora = OffsetDateTime.now();
-
 		
-		if(tsc.getValor() < 0 || tsc.getDataHora().isAfter(dataHora))
+		//verifica se a transacao é valida
+		if(tsc.getValor() < 0 || tsc.getDataHora().isAfter(OffsetDateTime.now()) || tsc.getDataHora() == null)
 			return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(null);
 		
-		banco.salvar(tsc);
+		//salva a transacao
+		repository.salvar(tsc);
 		
-		return ResponseEntity.status(HttpStatus.CREATED).body(tsc);
+		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
 	
+	//Deleta todas as transacoes
 	@DeleteMapping
 	public void delete (){
-		banco.deletar();
+		repository.deletar();
 	}
-	
-
 }

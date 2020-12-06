@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_btbPwDc4Eeu2XuSCvDQtGA" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_btb20Dc4Eeu2XuSCvDQtGA" source="codegen">
         <details xmi:id="_btb20Tc4Eeu2XuSCvDQtGA" key="codegenDirectory" value="/itau/src/main/java"/>
-        <details xmi:id="_dPVucDc4Eeu2XuSCvDQtGA" key="AssociatedSourceCode" value="/itau/src/main/java/com/desafio/itau/ItauApplication.java;173235059/1;/itau/src/main/java/com/desafio/itau/config/SwaggerConfig.java;3017669732/1;/itau/src/main/java/com/desafio/itau/controller/EstatisticaController.java;3645797393/1;/itau/src/main/java/com/desafio/itau/controller/TransacaoController.java;2161114149/1;/itau/src/main/java/com/desafio/itau/model/Estatistica.java;468505074/1;/itau/src/main/java/com/desafio/itau/model/Transacao.java;2042704601/1;/itau/src/main/java/com/desafio/itau/repository/CRUD.java;2371065474/1;/itau/src/main/java/com/desafio/itau/repository/TransacaoRepository.java;4163897351/1;/itau/src/main/java/com/desafio/itau/service/CalEstatisticaService.java;3886612024/1;/itau/src/test/java/com/desafio/itau/ItauApplicationTests.java;2821941017/1;"/>
+        <details xmi:id="_dPVucDc4Eeu2XuSCvDQtGA" key="AssociatedSourceCode" value="/itau/src/main/java/com/desafio/itau/ItauApplication.java;173235059/1;/itau/src/main/java/com/desafio/itau/config/SwaggerConfig.java;1100649883/1;/itau/src/main/java/com/desafio/itau/controller/EstatisticaController.java;117503636/1;/itau/src/main/java/com/desafio/itau/controller/TransacaoController.java;978980194/1;/itau/src/main/java/com/desafio/itau/model/Estatistica.java;1246771177/1;/itau/src/main/java/com/desafio/itau/model/Transacao.java;2167114655/1;/itau/src/main/java/com/desafio/itau/repository/CRUD.java;3814737349/1;/itau/src/main/java/com/desafio/itau/repository/TransacaoRepository.java;2546804648/1;/itau/src/main/java/com/desafio/itau/service/CalEstatisticaService.java;3133805239/1;/itau/src/test/java/com/desafio/itau/ItauApplicationTests.java;2821941017/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_cS_a8Dc4Eeu2XuSCvDQtGA">
@@ -40,7 +40,9 @@
           <packagedElement xmi:type="uml:Package" xmi:id="_cRZfgDc4Eeu2XuSCvDQtGA" name="config">
             <packagedElement xmi:type="uml:Class" xmi:id="_cTOEcDc4Eeu2XuSCvDQtGA" name="SwaggerConfig">
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cwyKMDc4Eeu2XuSCvDQtGA" name="docket" specification="_cTRHwDc4Eeu2XuSCvDQtGA">
-                <ownedParameter xmi:id="_cwyKMTc4Eeu2XuSCvDQtGA" type="_cuY9gTc4Eeu2XuSCvDQtGA" direction="return"/>
+                <ownedParameter xmi:id="_cwyKMTc4Eeu2XuSCvDQtGA" type="_cuY9gTc4Eeu2XuSCvDQtGA" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>return new Docket(DocumentationType.SWAGGER_2)&#xD;
 				.select()&#xD;
@@ -52,7 +54,9 @@
 		</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cwyxQDc4Eeu2XuSCvDQtGA" name="apiInfo" specification="_cTULEDc4Eeu2XuSCvDQtGA">
-                <ownedParameter xmi:id="_cwyxQTc4Eeu2XuSCvDQtGA" type="_cuVTIDc4Eeu2XuSCvDQtGA" direction="return"/>
+                <ownedParameter xmi:id="_cwyxQTc4Eeu2XuSCvDQtGA" type="_cuVTIDc4Eeu2XuSCvDQtGA" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>return new ApiInfoBuilder()&#xD;
 				.title(&quot;Desafio itau&quot;)&#xD;
@@ -102,18 +106,16 @@
               <ownedOperation xmi:id="_cv_gATc4Eeu2XuSCvDQtGA" name="salvar">
                 <ownedParameter xmi:id="_cv_gAjc4Eeu2XuSCvDQtGA" name="obj" type="_cv-R4Dc4Eeu2XuSCvDQtGA"/>
               </ownedOperation>
-              <ownedOperation xmi:id="_cwAuIDc4Eeu2XuSCvDQtGA" name="setTipoDeBanco">
-                <ownedParameter xmi:id="_cwAuITc4Eeu2XuSCvDQtGA" name="obj" type="_cv-R4Dc4Eeu2XuSCvDQtGA"/>
-              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_cUMU0Dc4Eeu2XuSCvDQtGA" name="TransacaoRepository">
-              <ownedAttribute xmi:id="_cwQlwDc4Eeu2XuSCvDQtGA" name="transacoes" isStatic="true" type="_cUBVsDc4Eeu2XuSCvDQtGA" isOrdered="true" association="_cxLLwTc4Eeu2XuSCvDQtGA">
+              <ownedAttribute xmi:id="_cwQlwDc4Eeu2XuSCvDQtGA" name="transacoes" type="_cUBVsDc4Eeu2XuSCvDQtGA" isOrdered="true" association="_cxLLwTc4Eeu2XuSCvDQtGA">
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cwRM0Dc4Eeu2XuSCvDQtGA" value="*"/>
                 <defaultValue xmi:type="uml:LiteralString" xmi:id="_cwRz4Dc4Eeu2XuSCvDQtGA" value="new ArrayList&lt;>()"/>
               </ownedAttribute>
               <interfaceRealization xmi:id="_cvlQUDc4Eeu2XuSCvDQtGA" client="_cUMU0Dc4Eeu2XuSCvDQtGA" supplier="_cUFnIDc4Eeu2XuSCvDQtGA" contract="_cUFnIDc4Eeu2XuSCvDQtGA"/>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cw2boDc4Eeu2XuSCvDQtGA" name="getTransacoes" specification="_cUOxEDc4Eeu2XuSCvDQtGA">
                 <ownedParameter xmi:id="_cw2boTc4Eeu2XuSCvDQtGA" type="_cUBVsDc4Eeu2XuSCvDQtGA" isOrdered="true" direction="return">
+                  <name xsi:nil="true"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cw2bojc4Eeu2XuSCvDQtGA" value="*"/>
                 </ownedParameter>
                 <language>java</language>
@@ -140,9 +142,6 @@
               <ownedOperation xmi:id="_cvqI0Dc4Eeu2XuSCvDQtGA" name="salvar" method="_cw3CsDc4Eeu2XuSCvDQtGA">
                 <ownedParameter xmi:id="_cvqI0Tc4Eeu2XuSCvDQtGA" name="tsc" type="_cUBVsDc4Eeu2XuSCvDQtGA"/>
               </ownedOperation>
-              <ownedOperation xmi:id="_cvrW8Dc4Eeu2XuSCvDQtGA" name="setTipoDeBanco">
-                <ownedParameter xmi:id="_cvr-ADc4Eeu2XuSCvDQtGA" name="obj" type="_cUBVsDc4Eeu2XuSCvDQtGA"/>
-              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_cv-R4Dc4Eeu2XuSCvDQtGA" name="T"/>
             <packagedElement xmi:type="uml:Association" xmi:id="_cxLLwTc4Eeu2XuSCvDQtGA" name="" memberEnd="_cxLLwjc4Eeu2XuSCvDQtGA _cwQlwDc4Eeu2XuSCvDQtGA">
@@ -151,7 +150,7 @@
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_cRgNMTc4Eeu2XuSCvDQtGA" name="service">
             <packagedElement xmi:type="uml:Class" xmi:id="_cUYiEDc4Eeu2XuSCvDQtGA" name="CalEstatisticaService">
-              <ownedAttribute xmi:id="_cwTCADc4Eeu2XuSCvDQtGA" name="estatistica" type="_cT6oADc4Eeu2XuSCvDQtGA" isReadOnly="true" association="_cxMZ4Tc4Eeu2XuSCvDQtGA">
+              <ownedAttribute xmi:id="_cwTCADc4Eeu2XuSCvDQtGA" name="estatistica" visibility="private" type="_cT6oADc4Eeu2XuSCvDQtGA" isReadOnly="true" association="_cxMZ4Tc4Eeu2XuSCvDQtGA">
                 <defaultValue xmi:type="uml:LiteralString" xmi:id="_cwTCATc4Eeu2XuSCvDQtGA" value="new Estatistica()"/>
               </ownedAttribute>
               <ownedAttribute xmi:id="_cwTpEDc4Eeu2XuSCvDQtGA" name="intervaloEmMilessegundos" visibility="private">
@@ -159,18 +158,20 @@
                 <defaultValue xmi:type="uml:LiteralString" xmi:id="_cwUQIDc4Eeu2XuSCvDQtGA" value="60000"/>
               </ownedAttribute>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cw3pwTc4Eeu2XuSCvDQtGA" name="calcular" specification="_cwB8QDc4Eeu2XuSCvDQtGA">
-                <ownedParameter xmi:id="_cw3pwjc4Eeu2XuSCvDQtGA" name="tsc" type="_cvDE0Tc4Eeu2XuSCvDQtGA"/>
+                <ownedParameter xmi:id="_DfJuoDfMEeu2XuSCvDQtGA" name="tsc" type="_cvDE0Tc4Eeu2XuSCvDQtGA"/>
+                <ownedParameter xmi:id="_DfJuoTfMEeu2XuSCvDQtGA" type="_cT6oADc4Eeu2XuSCvDQtGA" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>DoubleSummaryStatistics estatisticas = new DoubleSummaryStatistics();&#xD;
 	&#xD;
 	Instant instante = Instant.now();&#xD;
-	&#xD;
+&#xD;
 		for (Transacao transacao : tsc) {&#xD;
 			//IF responsavel por permitir apenas a passagem das transacoes que foram postas nos ultimos X intervalo &#xD;
 			if(instante.toEpochMilli() - transacao.getDataHora().toInstant().toEpochMilli() &lt; intervaloEmMilessegundos)&#xD;
 				estatisticas.accept(transacao.getValor());	&#xD;
 		}&#xD;
-		&#xD;
 		&#xD;
 		estatistica.setAvg(estatisticas.getAverage());&#xD;
 		estatistica.setSum(estatisticas.getSum());&#xD;
@@ -184,7 +185,8 @@
 			estatistica.setMax(0);&#xD;
 			estatistica.setMin(0);&#xD;
 		}&#xD;
-			&#xD;
+		&#xD;
+		return this.estatistica;	&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cw4Q0Dc4Eeu2XuSCvDQtGA" name="setIntervaloEmMilesegundos" specification="_cUaXQDc4Eeu2XuSCvDQtGA">
@@ -202,6 +204,7 @@
               </ownedOperation>
               <ownedOperation xmi:id="_cwB8QDc4Eeu2XuSCvDQtGA" name="calcular" method="_cw3pwTc4Eeu2XuSCvDQtGA">
                 <ownedParameter xmi:id="_cwB8QTc4Eeu2XuSCvDQtGA" name="tsc" type="_cvDE0Tc4Eeu2XuSCvDQtGA"/>
+                <ownedParameter xmi:id="_DfGrUDfMEeu2XuSCvDQtGA" type="_cT6oADc4Eeu2XuSCvDQtGA" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="_cxMZ4Tc4Eeu2XuSCvDQtGA" name="" memberEnd="_cxMZ4jc4Eeu2XuSCvDQtGA _cwTCADc4Eeu2XuSCvDQtGA">
@@ -210,20 +213,10 @@
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_cRxS8Dc4Eeu2XuSCvDQtGA" name="controller">
             <packagedElement xmi:type="uml:Class" xmi:id="_cTaRsDc4Eeu2XuSCvDQtGA" name="EstatisticaController">
-              <ownedAttribute xmi:id="_cwGNsDc4Eeu2XuSCvDQtGA" name="transacaoRepository" visibility="private" type="_cUMU0Dc4Eeu2XuSCvDQtGA" association="_cxEeEDc4Eeu2XuSCvDQtGA">
-                <defaultValue xmi:type="uml:LiteralString" xmi:id="_cwG0wDc4Eeu2XuSCvDQtGA" value="new TransacaoRepository()"/>
-              </ownedAttribute>
               <ownedAttribute xmi:id="_cwHb0Dc4Eeu2XuSCvDQtGA" name="calEst" visibility="private" type="_cUYiEDc4Eeu2XuSCvDQtGA" association="_cxGTQDc4Eeu2XuSCvDQtGA">
                 <defaultValue xmi:type="uml:LiteralString" xmi:id="_cwIC4Dc4Eeu2XuSCvDQtGA" value="new CalEstatisticaService()"/>
               </ownedAttribute>
-              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cwzYUDc4Eeu2XuSCvDQtGA" name="getEstatistica" specification="_cTd8EDc4Eeu2XuSCvDQtGA">
-                <ownedParameter xmi:id="_cwzYUTc4Eeu2XuSCvDQtGA" type="_cud2ADc4Eeu2XuSCvDQtGA" direction="return"/>
-                <language>java</language>
-                <body>calEst.calcular(transacaoRepository.getTransacoes());&#xD;
-		&#xD;
-		return ResponseEntity.ok(calEst.getEstatistica());&#xD;
-	</body>
-              </ownedBehavior>
+              <ownedAttribute xmi:id="_anlw0Dd_Eeu2XuSCvDQtGA" name="repository" visibility="private" type="_cUMU0Dc4Eeu2XuSCvDQtGA" association="_aoS7cDd_Eeu2XuSCvDQtGA"/>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cwzYUjc4Eeu2XuSCvDQtGA" name="post" specification="_cTi0kDc4Eeu2XuSCvDQtGA">
                 <ownedParameter xmi:id="_cwzYUzc4Eeu2XuSCvDQtGA" name="milisegundos">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
@@ -232,38 +225,43 @@
                 <body>calEst.setIntervaloEmMilesegundos(milisegundos);&#xD;
 	</body>
               </ownedBehavior>
-              <ownedOperation xmi:id="_cTd8EDc4Eeu2XuSCvDQtGA" name="getEstatistica" method="_cwzYUDc4Eeu2XuSCvDQtGA">
-                <ownedParameter xmi:id="_cv7OkDc4Eeu2XuSCvDQtGA" type="_cud2ADc4Eeu2XuSCvDQtGA" direction="return"/>
-              </ownedOperation>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_EPXDkDfMEeu2XuSCvDQtGA" name="get" specification="_EN3OwDfMEeu2XuSCvDQtGA">
+                <ownedParameter xmi:id="_EPXDkTfMEeu2XuSCvDQtGA" type="_cud2ADc4Eeu2XuSCvDQtGA" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>return ResponseEntity.ok(calEst.calcular(repository.getTransacoes()));&#xD;
+	</body>
+              </ownedBehavior>
               <ownedOperation xmi:id="_cTi0kDc4Eeu2XuSCvDQtGA" name="post" method="_cwzYUjc4Eeu2XuSCvDQtGA">
                 <ownedParameter xmi:id="_cTjboDc4Eeu2XuSCvDQtGA" name="milisegundos">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
                 </ownedParameter>
               </ownedOperation>
+              <ownedOperation xmi:id="_EN3OwDfMEeu2XuSCvDQtGA" name="get" method="_EPXDkDfMEeu2XuSCvDQtGA">
+                <ownedParameter xmi:id="_EPEvsDfMEeu2XuSCvDQtGA" type="_cud2ADc4Eeu2XuSCvDQtGA" direction="return"/>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_cTtMoDc4Eeu2XuSCvDQtGA" name="TransacaoController">
-              <ownedAttribute xmi:id="_cwJRADc4Eeu2XuSCvDQtGA" name="banco" type="_cUFnIDc4Eeu2XuSCvDQtGA" association="_cxHhYTc4Eeu2XuSCvDQtGA">
-                <defaultValue xmi:type="uml:LiteralString" xmi:id="_cwKfITc4Eeu2XuSCvDQtGA" value="new TransacaoRepository()"/>
-              </ownedAttribute>
+              <ownedAttribute xmi:id="_oDpGQDd_Eeu2XuSCvDQtGA" name="repository" type="_cUMU0Dc4Eeu2XuSCvDQtGA" association="_oDrigDd_Eeu2XuSCvDQtGA"/>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cw0mcDc4Eeu2XuSCvDQtGA" name="post" specification="_cuz0QDc4Eeu2XuSCvDQtGA">
                 <ownedParameter xmi:id="_cw0mcTc4Eeu2XuSCvDQtGA" name="tsc" type="_cUBVsDc4Eeu2XuSCvDQtGA"/>
                 <ownedParameter xmi:id="_cw0mcjc4Eeu2XuSCvDQtGA" type="_cud2ADc4Eeu2XuSCvDQtGA" direction="return">
                   <name xsi:nil="true"/>
                 </ownedParameter>
                 <language>java</language>
-                <body>OffsetDateTime dataHora = OffsetDateTime.now();&#xD;
-		&#xD;
-		if(tsc.getValor() &lt; 0 || tsc.getDataHora().isAfter(dataHora))&#xD;
+                <body>if(tsc.getValor() &lt; 0 || tsc.getDataHora().isAfter(OffsetDateTime.now()) || tsc.getDataHora() == null)&#xD;
 			return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(null);&#xD;
 		&#xD;
-		banco.salvar(tsc);&#xD;
+		//salva a transacao&#xD;
+		repository.salvar(tsc);&#xD;
 		&#xD;
-		return ResponseEntity.status(HttpStatus.CREATED).body(tsc);&#xD;
+		return ResponseEntity.status(HttpStatus.CREATED).build();&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cw0mczc4Eeu2XuSCvDQtGA" name="delete" specification="_cTxeEDc4Eeu2XuSCvDQtGA">
                 <language>java</language>
-                <body>banco.deletar();&#xD;
+                <body>repository.deletar();&#xD;
 	</body>
               </ownedBehavior>
               <ownedOperation xmi:id="_cTxeEDc4Eeu2XuSCvDQtGA" name="delete" method="_cw0mczc4Eeu2XuSCvDQtGA"/>
@@ -272,14 +270,14 @@
                 <ownedParameter xmi:id="_cv8csDc4Eeu2XuSCvDQtGA" type="_cud2ADc4Eeu2XuSCvDQtGA" direction="return"/>
               </ownedOperation>
             </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="_cxEeEDc4Eeu2XuSCvDQtGA" name="" memberEnd="_cxEeETc4Eeu2XuSCvDQtGA _cwGNsDc4Eeu2XuSCvDQtGA">
-              <ownedEnd xmi:id="_cxEeETc4Eeu2XuSCvDQtGA" name="" type="_cTaRsDc4Eeu2XuSCvDQtGA" association="_cxEeEDc4Eeu2XuSCvDQtGA"/>
-            </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="_cxGTQDc4Eeu2XuSCvDQtGA" name="" memberEnd="_cxGTQTc4Eeu2XuSCvDQtGA _cwHb0Dc4Eeu2XuSCvDQtGA">
               <ownedEnd xmi:id="_cxGTQTc4Eeu2XuSCvDQtGA" name="" type="_cTaRsDc4Eeu2XuSCvDQtGA" association="_cxGTQDc4Eeu2XuSCvDQtGA"/>
             </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="_cxHhYTc4Eeu2XuSCvDQtGA" name="" memberEnd="_cxIIcDc4Eeu2XuSCvDQtGA _cwJRADc4Eeu2XuSCvDQtGA">
-              <ownedEnd xmi:id="_cxIIcDc4Eeu2XuSCvDQtGA" name="" type="_cTtMoDc4Eeu2XuSCvDQtGA" association="_cxHhYTc4Eeu2XuSCvDQtGA"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_aoS7cDd_Eeu2XuSCvDQtGA" name="" memberEnd="_aoS7cTd_Eeu2XuSCvDQtGA _anlw0Dd_Eeu2XuSCvDQtGA">
+              <ownedEnd xmi:id="_aoS7cTd_Eeu2XuSCvDQtGA" name="" type="_cTaRsDc4Eeu2XuSCvDQtGA" association="_aoS7cDd_Eeu2XuSCvDQtGA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_oDrigDd_Eeu2XuSCvDQtGA" name="" memberEnd="_oDrigTd_Eeu2XuSCvDQtGA _oDpGQDd_Eeu2XuSCvDQtGA">
+              <ownedEnd xmi:id="_oDrigTd_Eeu2XuSCvDQtGA" name="" type="_cTtMoDc4Eeu2XuSCvDQtGA" association="_oDrigDd_Eeu2XuSCvDQtGA"/>
             </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_cS1p8Dc4Eeu2XuSCvDQtGA" name="ItauApplication">
@@ -348,6 +346,7 @@
           <packagedElement xmi:type="uml:Package" xmi:id="_cRSKwDc4Eeu2XuSCvDQtGA" name="annotation">
             <packagedElement xmi:type="uml:Interface" xmi:id="_cuMJMDc4Eeu2XuSCvDQtGA" name="Bean"/>
             <packagedElement xmi:type="uml:Interface" xmi:id="_cuN-YTc4Eeu2XuSCvDQtGA" name="Configuration"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_Z1zHUDdaEeu2XuSCvDQtGA" name="Description"/>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_cRdJ4Dc4Eeu2XuSCvDQtGA" name="http">
@@ -365,6 +364,16 @@
               <packagedElement xmi:type="uml:Interface" xmi:id="_cunnATc4Eeu2XuSCvDQtGA" name="RestController"/>
               <packagedElement xmi:type="uml:Interface" xmi:id="_cuvi0Dc4Eeu2XuSCvDQtGA" name="DeleteMapping"/>
               <packagedElement xmi:type="uml:Interface" xmi:id="_cuxYADc4Eeu2XuSCvDQtGA" name="RequestBody"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_7pc6IDd9Eeu2XuSCvDQtGA" name="stereotype">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_7p60MDd9Eeu2XuSCvDQtGA" name="Service"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_YfcOADd-Eeu2XuSCvDQtGA" name="beans">
+          <packagedElement xmi:type="uml:Package" xmi:id="_Yfc1EDd-Eeu2XuSCvDQtGA" name="factory">
+            <packagedElement xmi:type="uml:Package" xmi:id="_Yfc1ETd-Eeu2XuSCvDQtGA" name="annotation">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_YfmmEDd-Eeu2XuSCvDQtGA" name="Autowired"/>
             </packagedElement>
           </packagedElement>
         </packagedElement>
@@ -442,29 +451,29 @@
     <annotations xmi:id="_cTXOYTc4Eeu2XuSCvDQtGA" name="Configuration"/>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:LegacyStyledElement xmi:id="_cTcG4Dc4Eeu2XuSCvDQtGA" base_Element="_cTaRsDc4Eeu2XuSCvDQtGA"/>
-  <UMLLabProfile:Generics xmi:id="_cTgYUDc4Eeu2XuSCvDQtGA" genericsValue="Estatistica" base_Element="_cTd8EDc4Eeu2XuSCvDQtGA"/>
-  <UMLLabProfile:Annotations xmi:id="_cTiNgDc4Eeu2XuSCvDQtGA" base_Element="_cTd8EDc4Eeu2XuSCvDQtGA">
-    <annotations xmi:id="_cTiNgTc4Eeu2XuSCvDQtGA" name="GetMapping"/>
-  </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_cTkpwDc4Eeu2XuSCvDQtGA" base_Element="_cTjboDc4Eeu2XuSCvDQtGA">
     <annotations xmi:id="_cTkpwTc4Eeu2XuSCvDQtGA" name="PathVariable"/>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_cTlQ0Dc4Eeu2XuSCvDQtGA" base_Element="_cTi0kDc4Eeu2XuSCvDQtGA">
-    <annotations xmi:id="_cTlQ0Tc4Eeu2XuSCvDQtGA" name="PostMapping"/>
+    <annotations xmi:id="_cTlQ0Tc4Eeu2XuSCvDQtGA" name="PostMapping">
+      <annotationParameters xmi:id="_ohCMsDdaEeu2XuSCvDQtGA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__ezh0jfPEeu2XuSCvDQtGA" value="&quot;/{milisegundos}&quot;"/>
+      </annotationParameters>
+    </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_cTme8Dc4Eeu2XuSCvDQtGA" base_Element="_cTaRsDc4Eeu2XuSCvDQtGA">
     <annotations xmi:id="_cTme8Tc4Eeu2XuSCvDQtGA" name="RestController"/>
     <annotations xmi:id="_cTnGADc4Eeu2XuSCvDQtGA" name="RequestMapping">
       <annotationParameters xmi:id="_cTntEDc4Eeu2XuSCvDQtGA" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_cw6tEDc4Eeu2XuSCvDQtGA" value="&quot;/estatistica&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__ey6wDfPEeu2XuSCvDQtGA" value="&quot;/estatistica&quot;"/>
       </annotationParameters>
     </annotations>
     <annotations xmi:id="_cTntETc4Eeu2XuSCvDQtGA" name="CrossOrigin">
       <annotationParameters xmi:id="_cTntEjc4Eeu2XuSCvDQtGA" name="origins" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_cw6tETc4Eeu2XuSCvDQtGA" value="&quot;*&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__ezh0DfPEeu2XuSCvDQtGA" value="&quot;*&quot;"/>
       </annotationParameters>
       <annotationParameters xmi:id="_cToUIDc4Eeu2XuSCvDQtGA" name="allowedHeaders" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_cw7UIDc4Eeu2XuSCvDQtGA" value="&quot;*&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__ezh0TfPEeu2XuSCvDQtGA" value="&quot;*&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -476,15 +485,15 @@
     <annotations xmi:id="_cT0hYDc4Eeu2XuSCvDQtGA" name="RestController"/>
     <annotations xmi:id="_cT0hYTc4Eeu2XuSCvDQtGA" name="RequestMapping">
       <annotationParameters xmi:id="_cT0hYjc4Eeu2XuSCvDQtGA" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_E8Ag4DdNEeu2XuSCvDQtGA" value="&quot;/transacao&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_agJIkDfNEeu2XuSCvDQtGA" value="&quot;/transacao&quot;"/>
       </annotationParameters>
     </annotations>
     <annotations xmi:id="_cT1IcDc4Eeu2XuSCvDQtGA" name="CrossOrigin">
       <annotationParameters xmi:id="_cT1IcTc4Eeu2XuSCvDQtGA" name="origins" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_E8Ag4TdNEeu2XuSCvDQtGA" value="&quot;*&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_agJIkTfNEeu2XuSCvDQtGA" value="&quot;*&quot;"/>
       </annotationParameters>
       <annotationParameters xmi:id="_cT1Icjc4Eeu2XuSCvDQtGA" name="allowedHeaders" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_E8Ag4jdNEeu2XuSCvDQtGA" value="&quot;*&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_agJvoDfNEeu2XuSCvDQtGA" value="&quot;*&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -528,22 +537,15 @@
   <UMLLabProfile:Reference xmi:id="_cvDE0Dc4Eeu2XuSCvDQtGA" base_Element="_cvBPoDc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cvGIIDc4Eeu2XuSCvDQtGA" base_Element="_cvDE0Tc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Generics xmi:id="_cvnskDc4Eeu2XuSCvDQtGA" genericsValue="Transacao" base_Element="_cvlQUDc4Eeu2XuSCvDQtGA"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_cvslEDc4Eeu2XuSCvDQtGA" base_Element="_cvrW8Dc4Eeu2XuSCvDQtGA"/>
-  <UMLLabProfile:Annotations xmi:id="_cvtMIDc4Eeu2XuSCvDQtGA" base_Element="_cvrW8Dc4Eeu2XuSCvDQtGA">
-    <annotations xmi:id="_cvtMITc4Eeu2XuSCvDQtGA" name="Override"/>
-  </UMLLabProfile:Annotations>
   <UMLLabProfile:Reference xmi:id="_cvvoYDc4Eeu2XuSCvDQtGA" base_Element="_cvuaQDc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cvxdkDc4Eeu2XuSCvDQtGA" base_Element="_cvwPcDc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cv0g4Dc4Eeu2XuSCvDQtGA" base_Element="_cvzSwDc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cv1H8Dc4Eeu2XuSCvDQtGA" base_Element="_cv0g4Tc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cv_gADc4Eeu2XuSCvDQtGA" base_Element="_cv-R4Dc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Generics xmi:id="_cwDxcDc4Eeu2XuSCvDQtGA" genericsValue="Transacao" base_Element="_cwB8QTc4Eeu2XuSCvDQtGA"/>
-  <UMLLabProfile:Generics xmi:id="_cwKfIDc4Eeu2XuSCvDQtGA" genericsValue="Transacao" base_Element="_cwJRADc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_cwSa8Dc4Eeu2XuSCvDQtGA" base_Element="_cwQlwDc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_cwU3MDc4Eeu2XuSCvDQtGA" base_Element="_cwTpEDc4Eeu2XuSCvDQtGA"/>
-  <UMLLabProfile:Reference xmi:id="_cxFsMDc4Eeu2XuSCvDQtGA" base_Element="_cxEeEDc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cxHhYDc4Eeu2XuSCvDQtGA" base_Element="_cxGTQDc4Eeu2XuSCvDQtGA"/>
-  <UMLLabProfile:Reference xmi:id="_cxIvgDc4Eeu2XuSCvDQtGA" base_Element="_cxHhYTc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cxMZ4Dc4Eeu2XuSCvDQtGA" base_Element="_cxLLwTc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_cxNoADc4Eeu2XuSCvDQtGA" base_Element="_cxMZ4Tc4Eeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_2oQIYDdBEeu2XuSCvDQtGA" base_Element="_2mP9QDdBEeu2XuSCvDQtGA"/>
@@ -567,4 +569,31 @@
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Reference xmi:id="_w9l1MDdNEeu2XuSCvDQtGA" base_Element="_w8XtMDdNEeu2XuSCvDQtGA"/>
   <UMLLabProfile:Reference xmi:id="_w9mcQTdNEeu2XuSCvDQtGA" base_Element="_w9mcQDdNEeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Annotations xmi:id="_n2-_kDdZEeu2XuSCvDQtGA" base_Element="_cUaXQDc4Eeu2XuSCvDQtGA">
+    <annotations xmi:id="_n3D4EDdZEeu2XuSCvDQtGA" name="PostMapping"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_n3EfIDdZEeu2XuSCvDQtGA" base_Element="_cUaXQDc4Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Reference xmi:id="_Z16cEDdaEeu2XuSCvDQtGA" base_Element="_Z1zHUDdaEeu2XuSCvDQtGA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_7pFGsDd9Eeu2XuSCvDQtGA" base_Element="_cUMU0Dc4Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Annotations xmi:id="_7p0tkDd9Eeu2XuSCvDQtGA" base_Element="_cUMU0Dc4Eeu2XuSCvDQtGA">
+    <annotations xmi:id="_7p1UoDd9Eeu2XuSCvDQtGA" name="Service"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:StyledElement xmi:id="_7p17sDd9Eeu2XuSCvDQtGA" base_Element="_cUOxEDc4Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:StyledElement xmi:id="_7p17sTd9Eeu2XuSCvDQtGA" base_Element="_cvqI0Dc4Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:StyledElement xmi:id="_7p17sjd9Eeu2XuSCvDQtGA" base_Element="_cUR0YDc4Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Reference xmi:id="_7p7bQDd9Eeu2XuSCvDQtGA" base_Element="_7p60MDd9Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Reference xmi:id="_YfnNIDd-Eeu2XuSCvDQtGA" base_Element="_YfmmEDd-Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Annotations xmi:id="_an0aUDd_Eeu2XuSCvDQtGA" base_Element="_anlw0Dd_Eeu2XuSCvDQtGA">
+    <annotations xmi:id="_an1BYDd_Eeu2XuSCvDQtGA" name="Autowired"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_aog94Dd_Eeu2XuSCvDQtGA" base_Element="_aoS7cDd_Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Annotations xmi:id="_oDptUDd_Eeu2XuSCvDQtGA" base_Element="_oDpGQDd_Eeu2XuSCvDQtGA">
+    <annotations xmi:id="_oDqUYDd_Eeu2XuSCvDQtGA" name="Autowired"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_oDswoDd_Eeu2XuSCvDQtGA" base_Element="_oDrigDd_Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DfIggDfMEeu2XuSCvDQtGA" base_Element="_cwTCADc4Eeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Generics xmi:id="_EPHL8DfMEeu2XuSCvDQtGA" genericsValue="Estatistica" base_Element="_EN3OwDfMEeu2XuSCvDQtGA"/>
+  <UMLLabProfile:Annotations xmi:id="_EPUAQDfMEeu2XuSCvDQtGA" base_Element="_EN3OwDfMEeu2XuSCvDQtGA">
+    <annotations xmi:id="_EPUAQTfMEeu2XuSCvDQtGA" name="GetMapping"/>
+  </UMLLabProfile:Annotations>
 </xmi:XMI>
