@@ -2,9 +2,6 @@ package com.desafio.itau.model;
 
 import java.time.OffsetDateTime;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 //Bean de Transacao, a transacao recebe um JSON ( POST ) com o valor e hora ( offsetDateTime)
 // valor     -> valor da transacao com 2 numeros depois da virgula
 // dataHora - > data no padrão ISO 8601
@@ -30,5 +27,4 @@ public class Transacao {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-
 }

@@ -11,7 +11,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
  
-
+//DOC DE TODOS OS END-POINTS
 //LINK PARA ENTRAR NO SWAGGER http://localhost:8080/swagger-ui.html#/
 
 

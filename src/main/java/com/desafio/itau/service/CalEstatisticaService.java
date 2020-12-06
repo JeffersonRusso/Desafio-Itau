@@ -4,6 +4,8 @@ import java.time.Instant;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.PostMapping;
+
 import com.desafio.itau.model.Estatistica;
 import com.desafio.itau.model.Transacao;
 
@@ -17,19 +19,17 @@ public class CalEstatisticaService {
 	//Invertalo em ms que Calcular usa para selecionar as transacoes que iram fazer parte do JSON
 	private long intervaloEmMilessegundos = 60000;
 	
-	
-	public void calcular(List<Transacao> tsc) {	
+	public Estatistica calcular(List<Transacao> tsc) {	
 		
 	DoubleSummaryStatistics estatisticas = new DoubleSummaryStatistics();
 	
 	Instant instante = Instant.now();
-	
+
 		for (Transacao transacao : tsc) {
 			//IF responsavel por permitir apenas a passagem das transacoes que foram postas nos ultimos X intervalo 
 			if(instante.toEpochMilli() - transacao.getDataHora().toInstant().toEpochMilli() < intervaloEmMilessegundos)
 				estatisticas.accept(transacao.getValor());	
 		}
-		
 		
 		estatistica.setAvg(estatisticas.getAverage());
 		estatistica.setSum(estatisticas.getSum());
@@ -43,14 +43,12 @@ public class CalEstatisticaService {
 			estatistica.setMax(0);
 			estatistica.setMin(0);
 		}
-			
+		
+		return this.estatistica;	
 	}
 	
-	public Estatistica getEstatistica() {
-		return this.estatistica;
-	}
-	
-	//Mudar o INTERVALO DE COMPARAÇÕES
+	//Mudar o intervalo de calculos das estatisticas
+	@PostMapping
 	public void setIntervaloEmMilesegundos(long intervalo) {
 		this.intervaloEmMilessegundos = intervalo;
 	}
