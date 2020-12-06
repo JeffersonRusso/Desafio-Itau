@@ -25,7 +25,7 @@ import com.desafio.itau.repository.TransacaoRepository;
 
 @RestController
 @RequestMapping("/transacao")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*") 
 public class TransacaoController {
 	
 	//repositorio de transacoes
